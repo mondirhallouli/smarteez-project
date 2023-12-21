@@ -1,38 +1,71 @@
 .App {
-  text-align: center;
+    background-color: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter {
+    text-align: center;
+
+    & .counter__count {
+        margin: 0 0 2rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 6rem;
+        font-weight: normal;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* action buttons (increment, decrement) */
+.counter__actions {
+    & .counter__actions-row-1 {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    & button {
+        padding: 0.5rem 2.5rem;
+        border-radius: 4px;
+        font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+        color: var(--button-text);
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    .counter__decrement {
+        border: solid 1px var(--decrement-btn-bg);
+        background-color: var(--decrement-btn-bg);
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .counter__decrement:hover {
+        box-shadow:
+            0.3rem 0.3rem var(--decrement-btn-sh-1),
+            -0.3rem -0.3rem var(--decrement-btn-sh-2);
+    }
+
+    .counter__reset {
+        border: solid 1px var(--reset-btn-bg);
+        color: var(--reset-btn-bg);
+    }
+
+    .counter__reset:hover {
+        background-color: var(--reset-btn-bg);
+        color: var(--button-text);
+        box-shadow: 0 3px 10px var(--shadow-black);
+    }
+
+    .counter__increment {
+        border: solid 1px var(--increment-btn-bg);
+        background-color: var(--increment-btn-bg);
+    }
+
+    & .counter__increment:hover {
+        box-shadow:
+            0.3rem 0.3rem var(--increment-btn-sh-1),
+            -0.3rem -0.3rem var(--increment-btn-sh-2);
+    }
 }
