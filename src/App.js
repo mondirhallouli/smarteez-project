@@ -19,18 +19,27 @@ function App() {
     }, [count])
 
     const handleIncrement = (e) => {
+        // stop click event from propagating to outside elements
+        e.stopPropation();
+
         // make sure the correct button is clicked
         if (e.target.classList.contains("counter__increment")) {
             setCount(count + 1)
         }
     }
     const handleDecrement = (e) => {
+        // stop click event from propagating to outside elements
+        e.stopPropation();
+
         // make sure the correct button is clicked
         if (e.target.classList.contains("counter__decrement")) {
             setCount(count - 1)
         }
     }
     const handleReset = (e) => {
+        // stop click event from propagating to outside elements
+        e.stopPropation();
+
         // make sure the correct button is clicked
         if (e.target.classList.contains("counter__reset")) {
             setCount(0)
