@@ -20,7 +20,7 @@ function App() {
 
     const handleIncrement = (e) => {
         // stop click event from propagating to outside elements
-        e.stopPropation();
+        e.stopPropagation();
 
         // make sure the correct button is clicked
         if (e.target.classList.contains("counter__increment")) {
@@ -29,7 +29,7 @@ function App() {
     }
     const handleDecrement = (e) => {
         // stop click event from propagating to outside elements
-        e.stopPropation();
+        e.stopPropagation();
 
         // make sure the correct button is clicked
         if (e.target.classList.contains("counter__decrement")) {
@@ -38,7 +38,7 @@ function App() {
     }
     const handleReset = (e) => {
         // stop click event from propagating to outside elements
-        e.stopPropation();
+        e.stopPropagation();
 
         // make sure the correct button is clicked
         if (e.target.classList.contains("counter__reset")) {
